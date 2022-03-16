@@ -1,0 +1,8 @@
+The source of the pitch/roll creep is NOT from:
+
+flght_ctrl
+PD_math
+inert_intf
+
+
+I checked inertial_integrator and it toggles between 0 and -1 for pitch and roll

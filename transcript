@@ -1,0 +1,426 @@
+# Project file D:/ECE551/projectrepo/551-Project/Quadcopter.mpf is write protected, data cannot be saved.
+# Unable to save project.
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project Quadcopter
+# Compile of cmd_cfg.sv was successful.
+# Compile of CycloneIV.sv was successful.
+# Compile of ESC_block.sv was successful.
+# Compile of ESC_interface.sv was successful.
+# Compile of flght_cntrl.sv was successful.
+# Compile of inert_intf.sv failed with 1 errors.
+# Compile of inertial_integrator.sv was successful.
+# Compile of QuadCopter.sv was successful.
+# Compile of QuadCopter_tb.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_iNEMO3.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_comm.sv was successful.
+# Compile of UART_rcv.sv was successful.
+# Compile of PD_math.sv was successful.
+# 18 compiles, 1 failed with 1 error.
+# Compile of inert_intf.sv was successful.
+# Compile of QuadCopter_tb.sv failed with 1 errors.
+# Compile of QuadCopter_tb.sv failed with 1 errors.
+# Compile of QuadCopter_tb.sv failed with 1 errors.
+# Compile of QuadCopter_tb.sv was successful.
+vsim -gui work.QuadCopter_tb
+# vsim -gui work.QuadCopter_tb 
+# Start time: 10:54:33 on Apr 28,2021
+# Loading sv_std.std
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# ** Error: (vsim-3033) Instantiation of 'UART_tx' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /QuadCopter_tb/iDUT/iCOMM/iUART File: D:/ECE551/projectrepo/551-Project/UART.sv Line: 14
+#         Searched libraries:
+#             D:/ECE551/projectrepo/work
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# ** Error: (vsim-3033) Instantiation of 'ESCs' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /QuadCopter_tb/iDUT File: D:/ECE551/projectrepo/551-Project/QuadCopter.sv Line: 90
+#         Searched libraries:
+#             D:/ECE551/projectrepo/work
+# Loading work.RemoteComm
+# ** Error: (vsim-3033) Instantiation of 'UART_tx' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /QuadCopter_tb/iREMOTE/iUART File: D:/ECE551/projectrepo/551-Project/UART.sv Line: 14
+#         Searched libraries:
+#             D:/ECE551/projectrepo/work
+# Error loading design
+# End time: 10:54:33 on Apr 28,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 15
+# Compile of UART_tx.sv was successful.
+vsim -gui work.QuadCopter_tb
+# vsim -gui work.QuadCopter_tb 
+# Start time: 10:55:15 on Apr 28,2021
+# Loading sv_std.std
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# ** Error: (vsim-3033) Instantiation of 'ESCs' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /QuadCopter_tb/iDUT File: D:/ECE551/projectrepo/551-Project/QuadCopter.sv Line: 90
+#         Searched libraries:
+#             D:/ECE551/projectrepo/work
+# Loading work.RemoteComm
+# Error loading design
+# End time: 10:55:15 on Apr 28,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 3
+# Compile of QuadCopter.sv was successful.
+vsim -gui work.QuadCopter_tb
+# vsim -gui work.QuadCopter_tb 
+# Start time: 10:56:14 on Apr 28,2021
+# Loading sv_std.std
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# Loading work.ESC_block
+# Loading work.ESC_interface
+# Loading work.RemoteComm
+run -all
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint sim:/QuadCopter_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+quit -sim
+# End time: 10:59:06 on Apr 28,2021, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 1
+# Compile of QuadCopter_tb.sv was successful.
+vsim -gui work.QuadCopter_tb
+# vsim -gui work.QuadCopter_tb 
+# Start time: 11:00:02 on Apr 28,2021
+# Loading sv_std.std
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# Loading work.ESC_block
+# Loading work.ESC_interface
+# Loading work.RemoteComm
+add wave -position insertpoint sim:/QuadCopter_tb/*
+run
+run
+run
+run
+run -all
+run -all
+# Calibration failed.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(112)
+#    Time: 4000090 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in NamedBeginStat cal_timeout at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 112
+add wave -position insertpoint sim:/QuadCopter_tb/iREMOTE/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+run
+run -all
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/iCOMM/*
+restart -f
+run -all
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/iCMD/*
+restart -f
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf D:/ECE551/projectrepo/QC_wave.do
+quit -sim
+# End time: 11:20:51 on Apr 28,2021, Elapsed time: 0:20:49
+# Errors: 0, Warnings: 1
+# Compile of QuadCopter_tb.sv was successful.
+vsim -gui work.QuadCopter_tb
+# vsim -gui work.QuadCopter_tb 
+# Start time: 11:21:05 on Apr 28,2021
+# Loading sv_std.std
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# Loading work.ESC_block
+# Loading work.ESC_interface
+# Loading work.RemoteComm
+do {QC_wave.do}
+run -all
+# Compile of cmd_cfg.sv was successful.
+# Compile of CycloneIV.sv was successful.
+# Compile of ESC_block.sv was successful.
+# Compile of ESC_interface.sv was successful.
+# Compile of flght_cntrl.sv was successful.
+# Compile of inert_intf.sv failed with 1 errors.
+# Compile of inertial_integrator.sv was successful.
+# Compile of QuadCopter.sv was successful.
+# Compile of QuadCopter_tb.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_iNEMO3.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_comm.sv was successful.
+# Compile of UART_rcv.sv was successful.
+# Compile of PD_math.sv was successful.
+# Compile of UART_tx.sv was successful.
+# 19 compiles, 1 failed with 1 error.
+# Compile of cmd_cfg.sv was successful.
+# Compile of CycloneIV.sv was successful.
+# Compile of ESC_block.sv was successful.
+# Compile of ESC_interface.sv was successful.
+# Compile of flght_cntrl.sv was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of QuadCopter.sv was successful.
+# Compile of QuadCopter_tb.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_iNEMO3.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_comm.sv was successful.
+# Compile of UART_rcv.sv was successful.
+# Compile of PD_math.sv was successful.
+# Compile of UART_tx.sv was successful.
+# 19 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+# Loading work.CycloneIV
+# Loading work.reset_synch
+# Loading work.SPI_iNEMO3
+# Loading work.inverse_ESC
+# Loading work.QuadCopter
+# Loading work.UART_comm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rcv
+# Loading work.cmd_cfg
+# Loading work.inert_intf
+# Loading work.inertial_integrator
+# Loading work.SPI_mnrch
+# Loading work.flght_cntrl
+# Loading work.PD_math
+# Loading work.ESC_block
+# Loading work.ESC_interface
+# Loading work.RemoteComm
+run -all
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/iNEMO/iII/*
+restart -f
+run
+run -all
+run -all
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/iCOMM/iUART/*
+restart -f
+run -all
+# Compile of cmd_cfg.sv was successful.
+# Compile of QuadCopter_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+# Loading work.cmd_cfg
+run -all
+# Calibration complete.
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(120)
+#    Time: 4495410 ps  Iteration: 3  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 120
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Incorrect motor speed.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(110)
+#    Time: 4495410 ps  Iteration: 2  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 110
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Incorrect motor speed. Expected: 290, actual: 2c9
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(110)
+#    Time: 4495410 ps  Iteration: 2  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 110
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/ifly/*
+restart -f
+run -all
+# Incorrect motor speed. Expected: 290, actual: 2c9
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(110)
+#    Time: 4495410 ps  Iteration: 2  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 110
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Calibration complete.
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(129)
+#    Time: 4495410 ps  Iteration: 3  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 129
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Calibration complete.
+# Pitch timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 6495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Calibration complete.
+# Pitch timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 24495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147
+add wave -position insertpoint sim:/QuadCopter_tb/iQuad/*
+restart -f
+run -all
+# Calibration complete.
+# Pitch timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 24495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147
+# Compile of QuadCopter_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.QuadCopter_tb
+run -all
+# Calibration complete.
+# Thrust timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 24495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147
+add wave -position insertpoint sim:/QuadCopter_tb/iDUT/iESC/*
+restart -f
+run -all
+# Calibration complete.
+# Thrust timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 24495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147
+# A time value could not be extracted from the current line
+# Compile of cmd_cfg.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.cmd_cfg
+run -all
+# Calibration complete.
+# Thrust timeout
+# Testing complete.
+# ** Note: $stop    : D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv(147)
+#    Time: 24495450 ps  Iteration: 1  Instance: /QuadCopter_tb
+# Break in Module QuadCopter_tb at D:/ECE551/projectrepo/551-Project/QuadCopter_tb.sv line 147

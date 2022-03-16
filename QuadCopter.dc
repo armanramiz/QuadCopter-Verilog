@@ -1,0 +1,112 @@
+#####################################
+# Read in verilog source for the QuadCopter #
+####################################
+
+read_file -format sverilog {./QuadCopter.sv\
+                            ./ESC_interface.sv\
+                            ./ESC_block.sv\
+                            ./UART.sv\
+                            ./UART_tx.sv\
+                            ./UART_comm.sv\
+                            ./reset_synch.sv\
+                            ./flght_cntrl.sv\
+                            ./inert_intf.sv\
+                            ./SPI_mnrch.sv\
+                            ./cmd_cfg.sv\
+                            ./PD_math.sv\
+                            ./UART_rcv.sv\
+                            ./inertial_integrator.sv}
+
+							
+#####################################
+#Constrain and assign clock #
+####################################							
+set current_design QuadCopter
+link
+
+#####################################
+#Constrain and assign clock. Clock is 3.75ns period (266.6MHz)#
+####################################
+
+create_clock -name "clk" -period 3.75 -waveform {0 1} {clk}
+set_dont_touch_network [find port clk]
+
+#####################################
+#Dont let Synopsys buffer or do other crazy things with#
+#our internally generated global reset signal#
+####################################
+set_dont_touch_network [get_net iRST/rst_n]
+
+#####################################
+# Constrain input timings and drive (except the clk #
+#input delays of 0.25 ns on all inputs other than clock#
+####################################
+
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+set_input_delay -clock clk 0.25 $prim_inputs
+
+#####################################
+# Defines a drive strength equivalent to a 2-input nand of size 2from #
+#Synopsys32nm library (NAND2X2_RVT) for all inputs except clock and rst_n#
+#rst_n is driven very strongly so it doesnt need to be buffered#
+####################################
+
+set_driving_cell -lib_cell NAND2X2_RVT -library saed32rvt_tt0p85v25c $prim_inputs
+
+
+##########################
+# Set output delay & load on all outputs #
+# need all outputs valid 0.5ns prior to the next rising edge of clock. #
+# all outputs have to drive a 0.1pF load.#
+##########################
+
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.10 [all_outputs]
+
+#####################################
+# Wire load model allows it to estimate internal parasitics #
+####################################
+set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
+
+##################################
+# Max transition time is important for Hot-E reasons #
+#################################
+set_max_transition 0.15 [current_design]
+
+#########################
+# Now actually synthesize for 1st time #
+#########################
+compile -map_effort medium
+
+#####################################
+# Set  clock uncertainty (0.20ns) and do set fix hold #
+####################################
+
+set_clock_uncertainty 0.20 clk
+set_fix_hold clk
+
+##########################
+# Flatten the design so it has no hierarchy#
+##########################
+
+ungroup -all -flatten
+
+#####################################
+#Compile the design for a second time#
+####################################
+
+compile -map_effort medium
+
+##########################
+# Generate timing & Area reports#
+##########################
+report_timing -path full -delay max -nworst 3 > report_timing_max.txt
+report_timing -path full -delay min -nworst 3 > report_timing_min.txt
+report_area > QuadCopter_area.txt
+
+#####################################
+# Writes out the gate level verilog netlist (QuadCopter.vg)
+#####################################
+write -f verilog QuadCopter -o QuadCopter.vg
+
+
